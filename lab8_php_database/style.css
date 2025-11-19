@@ -1,0 +1,212 @@
+/* --- GLOBAL STYLING --- */
+body {
+  /* Menggunakan font sistem default, bersih, dan mudah dibaca */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  /* Warna latar belakang halaman */
+  background-color: #f4f4f9;
+  /* Margin default */
+  margin: 0;
+  /* Padding di bagian atas dan bawah */
+  padding: 20px 0;
+}
+
+.container {
+  /* Lebar konten utama */
+  width: 80%;
+  /* Rata tengah */
+  margin: 0 auto;
+  /* Latar belakang konten */
+  background-color: #ffffff;
+  /* Border radius pada sudut */
+  border-radius: 8px;
+  /* Bayangan lembut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Padding di dalam container */
+  padding: 30px;
+}
+
+h1 {
+  /* Judul besar dan tebal */
+  color: #333;
+  /* Margin bawah untuk jarak */
+  margin-bottom: 20px;
+  /* Garis bawah tipis */
+  border-bottom: 2px solid #eeeeee;
+  /* Padding di bawah garis */
+  padding-bottom: 10px;
+}
+
+/* Styling untuk link "Tambah Barang" */
+.container > p > a,
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container > p > a:hover,
+a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* --- TABLE STYLING (Untuk index.php) --- */
+
+table {
+  /* Lebar tabel penuh */
+  width: 100%;
+  /* Menggabungkan border sel yang berdekatan menjadi satu */
+  border-collapse: collapse;
+  /* Margin bawah */
+  margin-top: 20px;
+}
+
+/* Styling untuk Header (<th>) dan Data Cell (<td>) */
+th,
+td {
+  /* Menambahkan border 1 pixel solid berwarna abu-abu terang */
+  border: 1px solid #dddddd;
+  /* Padding di dalam sel */
+  padding: 12px 15px;
+  /* Teks rata kiri */
+  text-align: left;
+  /* Rata vertikal di tengah */
+  vertical-align: middle;
+}
+
+th {
+  /* Warna latar belakang header */
+  background-color: #007bff;
+  /* Warna teks header */
+  color: white;
+  /* Teks huruf besar */
+  text-transform: uppercase;
+  /* Ukuran font lebih kecil */
+  font-size: 14px;
+}
+
+/* Efek hover pada baris */
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Efek hover pada baris */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styling khusus untuk kolom Gambar */
+/* Styling untuk gambar di dalam sel data tabel (td) */
+td img {
+  /* Batasi tinggi gambar (Contoh: 80px) */
+  height: 80px;
+  /* Lebar gambar akan menyesuaikan secara proporsional (auto) */
+  width: auto;
+  /* Tambahkan border tipis agar terlihat rapi */
+  border: 1px solid #ddd;
+  /* Sudut sedikit melengkung */
+  border-radius: 4px;
+  /* Jarak di sekitar gambar */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styling untuk link Aksi (Ubah, Hapus) */
+td a {
+  margin-right: 10px;
+  white-space: nowrap; /* Mencegah Ubah dan Hapus terpisah baris */
+}
+
+/* Link Hapus agar warnanya merah */
+td a:last-child {
+  color: #dc3545;
+}
+
+/* --- FORM STYLING (Untuk tambah.php dan ubah.php) --- */
+
+.main form {
+  /* Tampilan grid untuk tata letak yang lebih baik */
+  display: grid;
+  /* Spasi antara baris */
+  gap: 15px;
+  /* Padding di dalam form */
+  padding: 10px 0;
+}
+
+.input {
+  /* Mengatur item dalam .input */
+  display: flex;
+  /* Jarak antara label dan input */
+  align-items: center;
+}
+
+.input label {
+  /* Lebar label konsisten */
+  width: 150px;
+  /* Teks tebal */
+  font-weight: 600;
+  /* Warna teks */
+  color: #555;
+  /* Margin kanan */
+  margin-right: 10px;
+}
+
+.input input[type="text"],
+.input input[type="file"],
+.input select {
+  /* Flex grow agar input mengambil sisa ruang */
+  flex-grow: 1;
+  /* Padding di dalam input */
+  padding: 10px;
+  /* Border */
+  border: 1px solid #ccc;
+  /* Sudut melengkung */
+  border-radius: 4px;
+  /* Ukuran font */
+  font-size: 16px;
+  /* Transisi halus */
+  transition: border-color 0.3s;
+}
+
+.input input[type="text"]:focus,
+.input select:focus {
+  /* Border berubah warna saat fokus */
+  border-color: #007bff;
+  /* Menghilangkan outline default */
+  outline: none;
+}
+
+/* Styling untuk tombol submit */
+.submit {
+  /* Rata kanan */
+  text-align: right;
+  /* Padding atas */
+  padding-top: 10px;
+}
+
+.submit input[type="submit"] {
+  /* Background biru */
+  background-color: #28a745;
+  /* Warna teks putih */
+  color: white;
+  /* Padding di tombol */
+  padding: 10px 20px;
+  /* Border dihilangkan */
+  border: none;
+  /* Sudut melengkung */
+  border-radius: 4px;
+  /* Pointer saat hover */
+  cursor: pointer;
+  /* Ukuran font */
+  font-size: 16px;
+  /* Teks tebal */
+  font-weight: 600;
+  /* Transisi halus */
+  transition: background-color 0.3s;
+}
+
+.submit input[type="submit"]:hover {
+  /* Warna sedikit lebih gelap saat hover */
+  background-color: #1e7e34;
+}
